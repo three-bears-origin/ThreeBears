@@ -1,0 +1,14 @@
+<h1> Your Timeline </h1>
+
+<p>
+<%= link_to "New Event", new_event_path %>
+</p>
+
+<table> 
+  <% @events.each do |event| %>
+    <tr>
+      <td><%= event.date %></td>
+      <td><%= event.title %></td>
+    </tr>
+  <% end %>
+</table>

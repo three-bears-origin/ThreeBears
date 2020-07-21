@@ -1,0 +1,16 @@
+current directory: C:/Users/caleb/RubyProjects/ThreeBears/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+C:/tools/ruby26/bin/ruby.exe -I C:/tools/ruby26/lib/ruby/site_ruby/2.6.0 -r ./siteconf20200721-11436-1pnw75m.rb extconf.rb
+creating Makefile
+
+current directory: C:/Users/caleb/RubyProjects/ThreeBears/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: C:/Users/caleb/RubyProjects/ThreeBears/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+generating cruby-x64-mingw32.def
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: C:/Users/caleb/RubyProjects/ThreeBears/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20200721-11436-tsqyqo/skiptrace/internal

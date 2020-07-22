@@ -1,0 +1,16 @@
+current directory: C:/Users/caleb/RubyProjects/ThreeBears/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.6/ext/bootsnap
+C:/tools/ruby26/bin/ruby.exe -I C:/tools/ruby26/lib/ruby/site_ruby/2.6.0 -r ./siteconf20200721-11436-sv3lvu.rb extconf.rb
+creating Makefile
+
+current directory: C:/Users/caleb/RubyProjects/ThreeBears/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.6/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: C:/Users/caleb/RubyProjects/ThreeBears/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.6/ext/bootsnap
+make "DESTDIR="
+generating bootsnap-x64-mingw32.def
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: C:/Users/caleb/RubyProjects/ThreeBears/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.4.6/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20200721-11436-1ke11jc/bootsnap

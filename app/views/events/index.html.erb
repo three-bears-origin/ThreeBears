@@ -5,7 +5,7 @@
 </p>
 
 <table> 
-  <% @events.each do |event| %>
+  <% @events.order(date: :asc).each do |event| %>
     <tr>
       <td><%= event.date %></td>
       <td><%= event.title %></td>

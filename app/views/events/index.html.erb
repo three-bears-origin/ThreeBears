@@ -4,11 +4,13 @@
 <%= link_to "New Event", new_event_path %>
 </p>
 
-<table> 
-  <% @events.order(date: :asc).each do |event| %>
-    <tr>
-      <td><%= event.date %></td>
-      <td><%= event.title %></td>
-    </tr>
-  <% end %>
-</table>
+<div class="history-tl-container"> 
+  <ul class="tl">
+    <% @events.each do |event| %>
+      <li class="tl-item">
+        <div class="timestamp"><%= event.date %></div>
+        <div class="item-title"><%= event.title %></div>
+      </li>
+    <% end %>
+  </ul>
+</div>

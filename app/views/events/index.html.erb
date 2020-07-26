@@ -4,12 +4,12 @@
 <%= link_to "New Event", new_event_path %>
 </p>
 
-<div class="history-tl-container"> 
-  <ul class="tl">
+<div class="timeline-container"> 
+  <ul class="timeline">
     <% @events.each do |event| %>
-      <li class="tl-item">
-        <div class="timestamp"><%= event.date %></div>
-        <div class="item-title"><%= event.title %></div>
+      <li class="timeline-event" ng-repeat="item in retailer_history">
+        <div class="event-date"><%= event.date %></div>
+        <div class="event-title"><%= event.title %></div>
       </li>
     <% end %>
   </ul>

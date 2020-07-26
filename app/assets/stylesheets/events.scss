@@ -2,61 +2,63 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+$circle-diameter: 20px;
+
 body {
     line-height: 1.3em;
     min-width: 920px;
 }
-.history-tl-container {
+.timeline-container {
     font-family: "Roboto", sans-serif;
     width: 50%;
     margin: auto;
     display: block;
     position: relative;
 }
-.history-tl-container ul.tl {
+.timeline-container ul.timeline {
     margin: 20px 0;
     padding: 0;
     display: inline-block;
 }
-.history-tl-container ul.tl li {
+.timeline-container ul.timeline li {
     list-style: none;
     margin: auto;
     margin-left: 200px;
     min-height: 50px;
     /*background: rgba(255,255,0,0.1);*/
-    border-left: 1px dashed #86d6ff;
     padding: 0 0 50px 30px;
     position: relative;
 }
-.history-tl-container ul.tl li:last-child {
+.timeline-container ul.timeline li:last-child {
     border-left: 0;
 }
-.history-tl-container ul.tl li::before {
+.timeline-container ul.timeline li::before {
     position: absolute;
-    left: -18px;
-    top: -5px;
     content: " ";
-    border: 8px solid rgba(255, 255, 255, 0.74);
-    border-radius: 500%;
-    background: #258cc7;
-    height: 20px;
-    width: 20px;
-    transition: all 500ms ease-in-out;
+    left: -$circle-diameter/2;
+    top: -$circle-diameter/2;
+    border-radius: 100%;
+    background: darkgoldenrod;
+    height: $circle-diameter;
+    width: $circle-diameter;
 }
-.history-tl-container ul.tl li:hover::before {
-    border-color: #258cc7;
-    transition: all 1000ms ease-in-out;
+li.timeline-event {
+    border-top: 1px dashed #86d6ff;
+    border-left: 1px solid darkgray;
 }
-ul.tl li .item-title {
-}
-ul.tl li .item-detail,
-.timestamp {
+ul.timeline li .event-detail, .event-date {
     color: rgba(0, 0, 0, 0.5);
     font-size: 12px;
 }
-ul.tl li .timestamp {
-    position: absolute;
-    width: 100px;
-    left: -150%;
-    text-align: right;
+ul.timeline li .event-date {
+    text-align: left;
+    float: left;
+}
+ul.timeline li .event-title {
+    padding: 10px;
+    float: left;
+    border: 2px solid black;
+    background-color: burlywood;
+    position: relative;
+    left: 20px;
 }

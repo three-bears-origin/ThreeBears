@@ -1,16 +1,15 @@
 <h1> Your Timeline </h1>
 
-<p>
-<%= link_to "New Event", new_event_path %>
-</p>
-
 <div class="timeline-container"> 
   <ul class="timeline">
     <% @events.each do |event| %>
-      <li class="timeline-event" ng-repeat="item in retailer_history">
+      <div class = "clear"></div>
+      <li class="timeline-event">
         <div class="event-date"><%= event.date %></div>
         <div class="event-title"><%= event.title %></div>
       </li>
     <% end %>
   </ul>
 </div>
+
+<a class="new-event" href="<%=new_event_path%>">Create a new event</a>

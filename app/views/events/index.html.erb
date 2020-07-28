@@ -34,7 +34,13 @@
           <div class = "clear"></div>
           <li class="timeline-event">
             <div class="event-date"><%= event.date %></div>
-            <div class="event-title"><%= event.title %></div>
+            <div class="event-box">
+              <div class="event-title"><%= event.title %></div>
+              <img class="icon image" src="../assets/image-icon.svg">
+              <img class="icon text" src="../assets/text-icon.svg">
+              <img class="icon audio" src="../assets/audio-icon.svg">
+              <img class="icon new-contribution" src="../assets/new-contribution-icon.svg">
+            </div>
           </li>
         <% end %>
       </ul>

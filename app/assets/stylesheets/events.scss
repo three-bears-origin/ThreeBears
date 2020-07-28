@@ -61,6 +61,7 @@ li.timeline-event {
     display: flex;
     flex-direction: row;
 }
+
 .event-title {
     font-weight: bold;
     min-width: 0; //prevents event-box's flex from breaking

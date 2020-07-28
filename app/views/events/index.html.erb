@@ -1,15 +1,46 @@
-<h1> Your Timeline </h1>
+<body>
 
-<div class="timeline-container"> 
-  <ul class="timeline">
-    <% @events.each do |event| %>
-      <div class = "clear"></div>
-      <li class="timeline-event">
-        <div class="event-date"><%= event.date %></div>
-        <div class="event-title"><%= event.title %></div>
-      </li>
-    <% end %>
-  </ul>
-</div>
+  <header>
+    <a href="" class="logo">
+      <img src="" alt="Logo">
+    </a>
+    <div class="search-bar">
+      <h3>Search</h3>
+    </div>
+  </header>
 
-<a class="new-event" href="<%=new_event_path%>">Create a new event</a>
+  <div class="page">
+
+    <div class="nav-bar">
+      <ul class="nav-icons">
+        <li class="nav-item">
+          <!--Change to link later-->
+          <h3>Profile</h3>
+        </li>
+        <li class="nav-item">
+          <a href="#index">Timeline</a>
+        </li>
+        <li class="nav-item">
+          <!--Change to link later-->
+          <h3>Chat</h3>
+        </li>
+      </ul>
+    </div>
+
+    <div class="timeline-container"> 
+      <h1> Your Timeline </h1>
+      <ul class="timeline">
+        <% @events.each do |event| %>
+          <div class = "clear"></div>
+          <li class="timeline-event">
+            <div class="event-date"><%= event.date %></div>
+            <div class="event-title"><%= event.title %></div>
+          </li>
+        <% end %>
+      </ul>
+      <a class="new-event" href="<%=new_event_path%>">Create a new event</a>
+    </div>
+
+  </div>
+
+</body>

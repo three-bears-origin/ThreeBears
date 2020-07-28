@@ -69,3 +69,42 @@ li.timeline-event {
     bottom: 30px;
     right: 30px;
 }
+
+//nav and header stuff
+
+header {
+    width: 100%;
+    height: 2rem;
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+}
+
+.logo, .search-bar {
+    margin: 0 1rem;
+}
+
+h3{
+    margin: 0;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: minmax(50px, 10%) 1fr;
+    //maybe don't need?
+    height: auto;
+}
+
+.nav-bar{
+    background-color: white;
+}
+
+.nav-icons{
+    padding: 0;
+    display: grid;
+}
+.nav-item {
+    padding: 1rem 0;
+    list-style: none;
+    grid-template-rows: auto;
+}

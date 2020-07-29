@@ -26,15 +26,6 @@ html {
     box-sizing: border-box;
 }
 
-<<<<<<< HEAD
- body {
-     margin: 0px;
-     text-align: center;
-     background-color: #fffce3;
-     font-family: "Roboto", sans-serif;
-     height: auto;
- }
-=======
 body {
     text-align: center;
     background-color: #fffce3;
@@ -44,4 +35,3 @@ body {
     grid-template-rows: auto 1fr;
     box-sizing: border-box;
 }
->>>>>>> 0436ca77c5f4d8bae5cc3abd7d862d90d8ec7c97

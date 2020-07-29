@@ -118,6 +118,9 @@ h3{
 .nav-bar{
     background-color: white;
 }
+.nav-bar.active {
+    background-color: orange;
+}
 
 .nav-icons{
     padding: 0;

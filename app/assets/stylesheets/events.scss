@@ -111,12 +111,11 @@ h3{
 .page {
     display: grid;
     grid-template-columns: minmax(50px, 10%) 1fr;
-    //maybe don't need?
-    height: auto;
 }
 
 .nav-bar{
     background-color: white;
+    height: auto;
 }
 .nav-bar.active {
     background-color: orange;

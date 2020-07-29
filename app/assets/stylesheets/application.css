@@ -17,6 +17,7 @@
 html {
     box-sizing: border-box;
     background-size: covers;
+
 }
 
 *, ::before, ::after {
@@ -29,4 +30,5 @@ html {
      text-align: center;
      background-color: #fffce3;
      font-family: "Roboto", sans-serif;
+     height: auto;
  }

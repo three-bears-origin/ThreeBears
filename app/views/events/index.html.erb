@@ -12,7 +12,7 @@
 
   <div class="page">
 
-    <div class="nav-bar">
+    <aside class="nav-bar">
       <ul class="nav-icons">
         <li class="nav-item">
           <!--Change to link later-->
@@ -27,11 +27,12 @@
           <h3>Chat</h3>
         </li>
       </ul>
-    </div>
+    </aside>
 
     <div class="timeline-container"> 
       <h1> Your Timeline </h1>
-      <ul class="timeline">
+
+      <ol class="timeline">
         <% @events.each do |event| %>
           <div class = "clear"></div>
           <li class="timeline-event">
@@ -45,7 +46,8 @@
             </div>
           </li>
         <% end %>
-      </ul>
+      </ol>
+
       <a class="new-event" href="<%=new_event_path%>">Create a new event</a>
       
     </div>

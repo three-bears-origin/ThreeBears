@@ -119,6 +119,9 @@ h3{
     display: block;
     min-height: 100%;
 }
+.nav-bar.active {
+    background-color: orange;
+}
 
 .nav-icons{
     padding: 0;

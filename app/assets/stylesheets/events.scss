@@ -41,6 +41,8 @@ li.timeline-event {
     border-top: 1px dashed #86d6ff;
     border-left: $timeline-thickness solid darkgray;
     display: grid;
+    grid-template-columns: auto auto 1fr;
+    margin: 0 4em;
 }
 .event-date {
     color: rgba(0, 0, 0, 0.5);
@@ -55,7 +57,7 @@ li.timeline-event {
     padding: 10px;
     background-color: burlywood;
     position: relative;
-    width: 35em;
+    width: auto;
     grid-column: 3;
     overflow-wrap: break-word;
 

@@ -21,11 +21,15 @@ html {
 *, ::before, ::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
- body {
-     margin: 0px;
-     text-align: center;
-     background-color: #fffce3;
-     font-family: "Roboto", sans-serif;
- }
+body {
+    text-align: center;
+    background-color: #fffce3;
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    box-sizing: border-box;
+}

@@ -2,33 +2,34 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-$circle-diameter: 10px;
-$timeline-thickness: 5px;
+$circle-diameter: 1.5em;
+$timeline-thickness: 0.2em;
 
 .timeline-container {
     text-align: left;
-    margin: auto;
+    margin: 2em auto auto auto;
     display: grid;
     position: relative;
-    place-items: center;
+    text-align: center;
 }
-ul.timeline {
+ol.timeline {
     display: inline-block;
-    padding: 0;
+    padding-top: 2em;
+    text-align: left;
 }
-ul.timeline li {
+ol.timeline li {
     list-style: none;
     padding-bottom: 1em;
     position: relative;
 }
-ul.timeline > :last-child {
+ol.timeline > :last-child {
     border-left-color: transparent;
 }
-ul.timeline li::before {
+ol.timeline li::before {
     position: relative;
     content: " ";
-    left: -($circle-diameter/2 + (3/2)*$timeline-thickness);
-    top: -($circle-diameter/2 + $timeline-thickness);
+    left: -($circle-diameter/2 + $timeline-thickness/2);
+    top: -$circle-diameter/2;
     border-radius: 50%;
     border: $timeline-thickness solid #9b7e00;
     background: white;
@@ -95,8 +96,8 @@ li.timeline-event {
 header {
     width: 100%;
     height: 2rem;
+    padding: 1rem 2rem 2rem 2rem;
     background-color: white;
-    padding: 1rem;
     display: flex;
 }
 
@@ -111,12 +112,12 @@ h3{
 .page {
     display: grid;
     grid-template-columns: minmax(50px, 10%) 1fr;
-    //maybe don't need?
-    height: auto;
 }
 
 .nav-bar{
     background-color: white;
+    display: block;
+    min-height: 100%;
 }
 
 .nav-icons{

@@ -17,6 +17,7 @@
 html {
     box-sizing: border-box;
     background-size: covers;
+
 }
 
 *, ::before, ::after {

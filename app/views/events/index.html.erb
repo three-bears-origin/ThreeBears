@@ -35,7 +35,6 @@
       <ol class="timeline" id="timeline">
         <% @events.each do |event| %>
           <div class = "clear"></div>
-<<<<<<< HEAD
           <li class="timeline-event">
             <div class="date"><%= event.date %></div>
             <div class="box">
@@ -44,17 +43,6 @@
               <%= image_tag("text-icon.svg", :class => "icon text" ) %>
               <%= image_tag("audio-icon.svg", :class => "icon audio" ) %>
               <%= image_tag("new-contribution-icon.svg", :class => "icon new-contribution" ) %>
-=======
-          <li class="timeline-event" id="timeline-event<%= event.id %>">
-            <div class="date" id="date<%= event.id %>"><%= event.date %></div>
-            <div class="box" id="box<%= event.id %>">
-              <div class="title" id="title<%= event.id %>"><%= event.title %></div>
-              <img class="icon image" src="app/assets/images/image-icon.svg">
-              <%= image_tag "image-icon.svg"%>
-              <img class="icon text" src="app/assets/images/text-icon.svg">
-              <img class="icon audio" src="app/assets/images/audio-icon.svg">
-              <img class="icon new-contribution" src="app/assets/images/new-contribution-icon.svg">
->>>>>>> f5e33265dcfcb01b21d45f499e8596bc8ca9cbc0
             </div>
             <div class="collapsible collapsed"  id="collapsible<%= event.id %>">Lorem ipsum</div>
           </li>

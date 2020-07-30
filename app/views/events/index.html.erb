@@ -12,7 +12,7 @@
 
   <div class="page">
 
-    <aside class="nav-bar">
+    <aside class="nav-bar" id="nav-bar">
       <ul class="nav-icons">
         <li class="nav-item">
           <!--Change to link later-->
@@ -32,19 +32,19 @@
     <div class="timeline-container"> 
       <h1> Your Timeline </h1>
 
-      <ol class="timeline">
+      <ol class="timeline" id="timeline">
         <% @events.each do |event| %>
           <div class = "clear"></div>
-          <li class="timeline-event">
-            <div class="date"><%= event.date %></div>
-            <div class="box">
-              <div class="title"><%= event.title %></div>
+          <li class="timeline-event" id="timeline-event<%= event.id %>">
+            <div class="date" id="date<%= event.id %>"><%= event.date %></div>
+            <div class="box" id="box<%= event.id %>">
+              <div class="title" id="title<%= event.id %>"><%= event.title %></div>
               <img class="icon image" src="/assets/image-icon.svg">
               <img class="icon text" src="/assets/text-icon.svg">
               <img class="icon audio" src="/assets/audio-icon.svg">
               <img class="icon new-contribution" src="/assets/new-contribution-icon.svg">
             </div>
-            <div class="collapsible collapsed">Lorem ipsum</div>
+            <div class="collapsible collapsed"  id="collapsible<%= event.id %>">Lorem ipsum</div>
           </li>
         <% end %>
       </ol>

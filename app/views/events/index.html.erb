@@ -42,17 +42,18 @@
               <img class="icon image" src="app/assets/image-icon.svg">
               <img class="icon text" src="app/assets/text-icon.svg">
               <img class="icon audio" src="app/assets/audio-icon.svg">
-              <img class="icon new-contribution" src="/assets/new-contribution-icon.svg">
+              <img class="icon new-contribution" src="app/assets/new-contribution-icon.svg">
             </div>
+            <div class="collapsible collapsed">Lorem ipsum</div>
           </li>
         <% end %>
       </ol>
 
-      <a class="new-event" href="<%=new_event_path%>">Create a new event</a>
+      <a class="new-event-button" href="<%=new_event_path%>">Create a new event</a>
       
     </div>
 
   </div>
 
 </body>
-<%= javascript_pack_tag 'events' %>
+<%= javascript_pack_tag 'events_index'%>

@@ -14,12 +14,6 @@
  *= require_self
  */
 
-html {
-    box-sizing: border-box;
-    background-size: covers;
-
-}
-
 *, ::before, ::after {
     margin: 0;
     padding: 0;
@@ -33,5 +27,4 @@ body {
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr;
-    box-sizing: border-box;
 }

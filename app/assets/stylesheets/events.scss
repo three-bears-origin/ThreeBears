@@ -44,37 +44,52 @@ li.timeline-event {
     grid-template-columns: auto auto 1fr;
     margin: 0 4em;
 }
-.event-date {
+.timeline-event .date {
     color: rgba(0, 0, 0, 0.5);
     font-size: 12px;
     margin: 0 1em 0 1em;
     white-space: nowrap;
 }
-.event-box {
-    $border-width: 2px;
-    border: $border-width solid black;
-    top: -$border-width;
-    padding: 10px;
+.timeline-event .box {
     background-color: burlywood;
-    position: relative;
     width: auto;
-    grid-column: 3;
     overflow-wrap: break-word;
 
     display: flex;
     flex-direction: row;
 }
+.timeline-event .box, .collapsible {
+    grid-column: 3;
+}
+.timeline-event .collapsible:not(.collapsed) {
+    border-top: 0;
+}
+.timeline-event .collapsible.collapsed {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    border: 0;
+}
+.timeline-event .box, .collapsible:not(.collapsed) {
+    $border-width: 2;
+    top: -$border-width;
+    $border-width: 2px;
+    border: $border-width solid black;
+    padding: 10px;
+    position: relative;
+}
 
-.event-title {
+.timeline-event .title {
     font-weight: bold;
-    min-width: 0; //prevents event-box's flex from breaking
+    min-width: 0; //prevents box's flex from breaking
     flex: 1;
 }
+
 .clear {
     clear: both;
 }
 
-.event-box .icon {
+.timeline-event .box .icon {
     height: 30px;
     position: relative;
     align-self: flex-end;
@@ -82,7 +97,7 @@ li.timeline-event {
     flex: 0;
 }
 
-.new-event {
+.new-event-button {
     color: white;
     background-color: darkblue;
     text-decoration: none;

@@ -5,6 +5,8 @@ timeline.addEventListener("click", eventDropdown);
 
 //open dropdown and scroll to event
 function eventDropdown(event) {
+    console.log(event);
+    if (event.target.tagName == "A" || event.target.parentNode.tagName == "A") return;
     box = event.target.closest(".box");
     if (!box) return;
 

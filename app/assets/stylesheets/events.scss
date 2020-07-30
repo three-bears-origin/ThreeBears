@@ -89,7 +89,7 @@ li.timeline-event {
     clear: both;
 }
 
-.timeline-event .box .icon {
+.timeline-event .box .icon, .timeline-event .box a {
     height: 30px;
     position: relative;
     align-self: flex-end;

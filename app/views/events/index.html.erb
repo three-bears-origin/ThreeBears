@@ -43,9 +43,18 @@
               <%= image_tag "image-icon.svg"%>
               <img class="icon text" src="app/assets/images/text-icon.svg">
               <img class="icon audio" src="app/assets/images/audio-icon.svg">
-              <img class="icon new-contribution" src="app/assets/images/new-contribution-icon.svg">
+              <a href=<%=new_event_contribution_path(event)%>>
+                <img class="icon new-contribution" src="app/assets/images/new-contribution-icon.svg">
+              </a>
             </div>
-            <div class="collapsible collapsed"  id="collapsible<%= event.id %>">Lorem ipsum</div>
+            <div class="collapsible collapsed"  id="collapsible<%= event.id %>">
+              <%=event.contributions.each do |contribution|%>
+                <p>
+                  <strong>Contribution <%= contribution.id %>: </strong>
+                  <%= contribution.text%>
+                </p>
+              <% end %>
+            </div>
           </li>
         <% end %>
       </ol>

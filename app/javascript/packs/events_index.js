@@ -1,20 +1,27 @@
-const timeline = document.getElementById("timeline");
 var openCollapsible = null;
 
-timeline.addEventListener("click", eventDropdown);
+$(document).on('turbolinks:load', function() {
+    $('[data-js-new-contribution]').click(function(event){
+        event.preventDefault();
+        c = getClosestCollapsible(event.target);
+        $('#' + c.id).html("<%= j (render partial: 'new') %>");
+    });
 
-//open dropdown and scroll to event
-function eventDropdown(event) {
-    console.log(event);
-    if (event.target.tagName == "A" || event.target.parentNode.tagName == "A") return;
-    box = event.target.closest(".box");
-    if (!box) return;
+    const timeline = document.getElementById("timeline");
+    if (timeline)
+        timeline.addEventListener("click", toggleCollapsible); 
+});
 
-    thisCollapsible = box.nextElementSibling;
-    if (!thisCollapsible.classList.contains("collapsible")) {
-        alert("Error: collapsible must be next sibling after box");
-        return;
-    }
+//open collapsible and scroll to event or close
+function toggleCollapsible(event) {
+    if (event.target.classList.contains("trash")) return;
+
+    let thisCollapsible = getClosestCollapsible(event.target);
+
+    // if clicking an icon that isn't trash
+    let mustOpen = event.target.classList.contains("icon");
+
+    if (mustOpen && openCollapsible == thisCollapsible) return;
 
     if (thisCollapsible == openCollapsible) {
         thisCollapsible.classList.add("collapsed");
@@ -26,5 +33,24 @@ function eventDropdown(event) {
         openCollapsible = thisCollapsible;
         box.scrollIntoView();
     }
+
+}
+
+// must be called from within a box element
+function getClosestCollapsible(e) {
+    box = e.closest(".box");
+    if (!box) return null;
+
+    result = box.nextElementSibling;
+    if (!result.classList.contains("collapsible")) {
+        alert("Error: collapsible must be next sibling after box");
+        return null;
+    }
+
+    return result;
+}
+
+//change HTML code within collapsible to a new-contribution form
+function collapsibleTransition() {
 
 }

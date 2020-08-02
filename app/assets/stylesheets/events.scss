@@ -90,11 +90,14 @@ li.timeline-event {
 }
 
 .timeline-event .box .icon, .timeline-event .box a {
-    height: 30px;
-    position: relative;
     align-self: flex-end;
-    padding-left: 10px;
+    height: 2em;
+}
+
+.timeline-event .box .icon {
     flex: 0;
+    position: relative;
+    padding-left: 10px;
 }
 
 .new-event-button {

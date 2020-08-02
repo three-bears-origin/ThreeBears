@@ -16,14 +16,17 @@
       <ul class="nav-icons">
         <li class="nav-item">
           <!--Change to link later-->
+          <img src="">
           <h3>Profile</h3>
         </li>
         <li class="nav-item">
           <!--add link later-->
-          <a href="">Timeline</a>
+          <img src="">
+          <h3>Timeline</h3>
         </li>
         <li class="nav-item">
           <!--Change to link later-->
+          <img src="">
           <h3>Chat</h3>
         </li>
       </ul>
@@ -38,7 +41,7 @@
           <li class="timeline-event" id="timeline-event<%= event.id %>">
             <div class="date" id="date<%= event.id %>"><%= event.date %></div>
             <div class="box">
-              <div class="title"><%= event.title %></div>
+              <p class="title"><%= event.title %></p>
               <%= link_to(image_tag("trash-icon.svg", :class => "icon trash"), event_path(event),
               method: :delete, data: { confirm: 'Are you sure?' }) %>
               <%= image_tag("image-icon.svg", :class => "icon image" ) %>

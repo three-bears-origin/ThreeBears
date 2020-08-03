@@ -7,20 +7,16 @@ $timeline-thickness: 0.2em;
 
 .timeline-container {
     text-align: left;
-    margin: 2em auto auto auto;
-    display: grid;
+    margin-top: 2em;
     position: relative;
     text-align: center;
+    width: 100%;
 }
 ol.timeline {
     display: inline-block;
-    padding-top: 2em;
     text-align: left;
-}
-ol.timeline li {
-    list-style: none;
-    padding-bottom: 1em;
-    position: relative;
+    width: 100%;
+    padding: 2em 8em 0 8em;
 }
 ol.timeline > :last-child {
     border-left-color: transparent;
@@ -38,11 +34,14 @@ ol.timeline li::before {
 }
 
 li.timeline-event {
+    list-style: none;
+    padding-bottom: 1em;
+    position: relative;
     border-top: 1px dashed #86d6ff;
     border-left: $timeline-thickness solid darkgray;
     display: grid;
     grid-template-columns: auto auto 1fr;
-    margin: 0 4em;
+    width: 100%;
 }
 .timeline-event .date {
     color: rgba(0, 0, 0, 0.5);
@@ -71,12 +70,12 @@ li.timeline-event {
     border: 0;
 }
 .timeline-event .box, .collapsible:not(.collapsed) {
-    $border-width: 2;
-    top: -$border-width;
     $border-width: 2px;
     border: $border-width solid black;
     padding: 10px;
     position: relative;
+    max-height: 12em;
+    overflow: auto;
 }
 
 .timeline-event .title {
@@ -85,16 +84,28 @@ li.timeline-event {
     flex: 1;
 }
 
+.collapsible .contribution+.contribution {
+    margin-top: 1em;
+}
+
+.contribution, .contribution .p {
+    width: auto;
+    overflow-wrap: break-word;
+}
+
 .clear {
     clear: both;
 }
 
 .timeline-event .box .icon, .timeline-event .box a {
-    height: 30px;
-    position: relative;
     align-self: flex-end;
-    padding-left: 10px;
+    height: 2em;
+}
+
+.timeline-event .box .icon {
     flex: 0;
+    position: relative;
+    padding-left: 10px;
 }
 
 .new-event-button {

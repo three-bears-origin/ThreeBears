@@ -4,19 +4,30 @@
 
 $circle-diameter: 1.5em;
 $timeline-thickness: 0.2em;
+$color-dark: #0e2d42;
+$color-light: #F4A261;
+$color-medium: #2A9D8F;
+$neutral: darkgray;
+$bg: #FAFDFD;
+$text-light: #FAFDFD;
+$text-dark:#0e2d42;
 
 .timeline-container {
     text-align: left;
-    margin-top: 2em;
+    margin: 2em auto auto auto;
+    display: grid;
     position: relative;
     text-align: center;
-    width: 100%;
 }
 ol.timeline {
     display: inline-block;
+    padding-top: 2em;
     text-align: left;
-    width: 100%;
-    padding: 2em 8em 0 8em;
+}
+ol.timeline li {
+    list-style: none;
+    padding-bottom: 1em;
+    position: relative;
 }
 ol.timeline > :last-child {
     border-left-color: transparent;
@@ -27,21 +38,18 @@ ol.timeline li::before {
     left: -($circle-diameter/2 + $timeline-thickness/2);
     top: -$circle-diameter/2;
     border-radius: 50%;
-    border: $timeline-thickness solid #9b7e00;
-    background: white;
+    border: $timeline-thickness solid $color-light;
+    background: $bg;
     height: $circle-diameter;
     width: $circle-diameter;
 }
 
 li.timeline-event {
-    list-style: none;
-    padding-bottom: 1em;
-    position: relative;
-    border-top: 1px dashed #86d6ff;
-    border-left: $timeline-thickness solid darkgray;
+    border-top: 1px dashed $color-medium;
+    border-left: $timeline-thickness solid $neutral;
     display: grid;
     grid-template-columns: auto auto 1fr;
-    width: 100%;
+    margin: 0 4em;
 }
 .timeline-event .date {
     color: rgba(0, 0, 0, 0.5);
@@ -50,10 +58,10 @@ li.timeline-event {
     white-space: nowrap;
 }
 .timeline-event .box {
-    background-color: burlywood;
+    background-color: $color-light;
     width: auto;
     overflow-wrap: break-word;
-
+    color: $color-dark;
     display: flex;
     flex-direction: row;
 }
@@ -70,27 +78,20 @@ li.timeline-event {
     border: 0;
 }
 .timeline-event .box, .collapsible:not(.collapsed) {
+    /*
+    $border-width: 2;
+    top: -$border-width;
     $border-width: 2px;
-    border: $border-width solid black;
+    border: $border-width solid $neutral;
+    */
     padding: 10px;
     position: relative;
-    max-height: 12em;
-    overflow: auto;
 }
 
 .timeline-event .title {
     font-weight: bold;
     min-width: 0; //prevents box's flex from breaking
     flex: 1;
-}
-
-.collapsible .contribution+.contribution {
-    margin-top: 1em;
-}
-
-.contribution, .contribution .p {
-    width: auto;
-    overflow-wrap: break-word;
 }
 
 .clear {
@@ -109,8 +110,8 @@ li.timeline-event {
 }
 
 .new-event-button {
-    color: white;
-    background-color: darkblue;
+    color: $text-light;
+    background-color: $color-medium;
     text-decoration: none;
     padding: 10px;
     border-radius: 10px;
@@ -121,11 +122,15 @@ li.timeline-event {
 
 //nav and header stuff
 
+h1 {
+    color: $color-dark;
+}
+
 header {
     width: 100%;
     height: 2rem;
     padding: 1rem 2rem 2rem 2rem;
-    background-color: white;
+    background-color: $color-medium;
     display: flex;
 }
 
@@ -133,23 +138,30 @@ header {
     margin: 0 1rem;
 }
 
+.search-bar{
+    display: grid;
+    grid-template: auto 1fr auto / auto 1fr auto;
+}
+
 h3{
+    color: $text-light;
     margin: 0;
 }
 
 .page {
     display: grid;
-    grid-template-columns: minmax(50px, 10%) 1fr;
+    grid-template-columns: minmax(80px, 8%) 1fr;
 }
 
 .nav-bar{
-    background-color: white;
+    background-color: $color-medium;
     display: block;
     min-height: 100%;
 }
+/* was using to test javascript
 .nav-bar.active {
     background-color: orange;
-}
+}*/
 
 .nav-icons{
     padding: 0;

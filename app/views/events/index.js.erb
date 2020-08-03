@@ -1,0 +1,20 @@
+$(document).on('turbolinks:load', function() {
+    $('[data-js-new-contribution]').click(function(event){
+        event.preventDefault();
+        c = getClosestCollapsible(event.target);
+        $('#' + c.id).html("<%= j (render partial: 'new') %>");
+    });
+});
+
+function getClosestCollapsible(e) {
+    box = e.closest(".box");
+    if (!box) return null;
+
+    result = box.nextElementSibling;
+    if (!result.classList.contains("collapsible")) {
+        alert("Error: collapsible must be next sibling after box");
+        return null;
+    }
+
+    return result;
+}

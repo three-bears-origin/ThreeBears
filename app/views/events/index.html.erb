@@ -5,9 +5,15 @@
       <img src="" alt="Logo">
     </a>
     <div class="search-bar">
-      <!--add search bar later-->
+      <!--get search bar working later-->
       <h3>Search</h3>
+      <%= form_with local: true do |form| %>
+        <%= form.text_field :text %>
+      <% end %>
     </div>
+    <a href="" class="help">
+      <img src="" alt="Help">
+    </a>
   </header>
 
   <div class="page">

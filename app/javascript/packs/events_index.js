@@ -9,16 +9,19 @@ $(document).on('turbolinks:load', function() {
 
     const timeline = document.getElementById("timeline");
     if (timeline)
-        timeline.addEventListener("click", toggleCollapsible); 
+        timeline.addEventListener("click", toggleCollapsible);
 });
 
 //open collapsible and scroll to event or close
 function toggleCollapsible(event) {
-    if (event.target.classList.contains("trash")) return;
+    if (event.target.classList.contains("trash") ||
+        event.target.classList.contains("new-contribution")) {
+        return;
+    }
 
     let thisCollapsible = getClosestCollapsible(event.target);
 
-    // if clicking an icon that isn't trash
+    // if clicking an icon that isn't trash or new-contribution
     let mustOpen = event.target.classList.contains("icon");
 
     if (mustOpen && openCollapsible == thisCollapsible) return;

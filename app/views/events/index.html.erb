@@ -53,8 +53,9 @@
               <%= image_tag("image-icon.svg", :class => "icon image" ) %>
               <%= image_tag("text-icon.svg", :class => "icon text" ) %>
               <%= image_tag("audio-icon.svg", :class => "icon audio" ) %>
-              <%= link_to image_tag("new-contribution-icon.svg", :class => "icon new-contribution" ), "",
-              class: 'new-contribution', data: {'js-new-contribution' => true} %>
+              <a href=<%=new_event_contribution_path(event)%>>
+                <%= image_tag("new-contribution-icon.svg", :class => "icon new-contribution" )%>
+              </a>
             </div>
             <div class="collapsible collapsed"  id="collapsible<%= event.id %>">
               <% contrCount = 0 %>
